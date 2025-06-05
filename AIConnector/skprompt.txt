@@ -1,0 +1,6 @@
+Determine if gpt-4o-mini or gpt-4.1-mini would be a better model for the event context and output the model.
+
+Format Example:
+gpt-4.1-mini
+
+Event:{{$input}}
