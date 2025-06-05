@@ -1,0 +1,3 @@
+Ensure that the topic for the quiz is appropriate and not offensive and make sure to replace any bad words. Change the content if necessary to ensure it is an appropriate and valid trivia topic. If the topic is appropriate, return that topic as is. Else, change the topic to be appropriate by removing any bad or inappropriate words and return the filtered topic.
+
+Topic:{{$input}}
