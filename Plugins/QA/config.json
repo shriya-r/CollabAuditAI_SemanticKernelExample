@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "description": "Generate a quiz from input",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.9,
+      "quiz_model": "gpt4o"
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "Quiz subject",
+      "default": ""
+    }
+  ]
+}

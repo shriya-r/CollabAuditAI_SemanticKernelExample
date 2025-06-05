@@ -1,0 +1,7 @@
+Generate a very creative and unique quiz trivia question and an accurate answer related to a given event.
+
+Format Example:
+Question:What all can AI be used for?
+Answer: To make processes easy. 
+
+Event:{{$input}}
