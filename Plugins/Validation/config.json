@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "description": "Validate the answer is accurate for a trivia quiz",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.9
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "Question and answer to be verified",
+      "default": ""
+    }
+  ]
+}

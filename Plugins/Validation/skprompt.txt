@@ -1,0 +1,6 @@
+There will be a question and an answer provided in the inputted quiz that will need to be verified to ensure that the answer is accurate. If the answer from the inputted quiz is accurate, the output should equal Yes, else it should be No.
+
+Format Example:
+Yes 
+
+Quiz:{{$input}}
