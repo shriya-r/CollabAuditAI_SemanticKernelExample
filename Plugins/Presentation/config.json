@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "description": "Format the output as a question and an answer",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.7
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "A trivia quiz to be formatted",
+      "default": ""
+    }
+  ]
+}

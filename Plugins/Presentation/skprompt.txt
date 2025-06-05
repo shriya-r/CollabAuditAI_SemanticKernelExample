@@ -1,0 +1,7 @@
+There will be a trivia quiz inputted that needs to be formatted as a question and an answer as shown below.
+
+Format Example:
+QUESTION: 
+ANSWER: 
+
+Quiz:{{$input}}
