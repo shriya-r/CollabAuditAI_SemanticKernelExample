@@ -1,0 +1,7 @@
+Generate a creative and interesting quiz question and an accurate answer related to soccer trivia with an event that provides a more specific soccer topic.
+
+Format Example:
+Question: 
+Answer: 
+
+Event:{{$input}}

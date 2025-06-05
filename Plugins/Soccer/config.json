@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "description": "Generate a quiz that is soccer trivia",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 1
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "Specific soccer topic for the quiz",
+      "default": ""
+    }
+  ]
+}
