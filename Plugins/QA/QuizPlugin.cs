@@ -1,6 +1,5 @@
 using Microsoft.SemanticKernel;
 using CollabAuditAI.CollabQuiz.PluginFunctions;
-using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 namespace CollabAuditAI.CollabQuiz.QuizPlugin
 {
@@ -15,17 +14,8 @@ namespace CollabAuditAI.CollabQuiz.QuizPlugin
         {
             var arguments = new KernelArguments() { ["input"] = topic };
 
-            Plugin pluginFunctions = new AIConnector.AIConnector(kernel);
-            var model_name = await pluginFunctions.CallPluginFunction("Need to create a quiz about " + topic);
-            string modelID = "gpt4o";
-            if (model_name.Contains("gpt-4.1-mini"))
-            {
-                modelID = "gpt4.1";
-            }
-            arguments.ExecutionSettings = new Dictionary<string, PromptExecutionSettings>()
-            {
-                [modelID] = new OpenAIPromptExecutionSettings { ServiceId = modelID }
-            };
+            var AIplugin = new AIConnector.AIConnector(kernel);
+            arguments = await AIplugin.ChooseLLM(arguments, "I need to create a quiz with this topic: " + topic);
 
             var result1 = await kernel.InvokeAsync(KernelBuilder.KernelBuilder.pluginFunctions["QA"], arguments);
             var result = result1.ToString();
