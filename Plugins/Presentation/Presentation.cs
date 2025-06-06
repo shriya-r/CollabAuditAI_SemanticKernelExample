@@ -16,6 +16,8 @@ namespace CollabAuditAI.CollabQuiz.Presentation
         public async Task<string> CallPluginFunction(string output) // Formatter plugin to pass the result into LLM for desired formatting
         {
             var arguments = new KernelArguments() { ["input"] = output };
+            var AIplugin = new AIConnector.AIConnector(kernel);
+            arguments = await AIplugin.ChooseLLM(arguments, "I need to format this output: " + output);
             var result = await kernel.InvokeAsync(pluginFunctions["Presentation"], arguments);
             return result.ToString();
         }

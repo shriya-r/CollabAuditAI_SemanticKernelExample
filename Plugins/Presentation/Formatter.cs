@@ -17,10 +17,9 @@ namespace CollabAuditAI.CollabQuiz.Formatter
                 PluginFunctions.Plugin presentPlugin = new Presentation.Presentation(kernel); // Present the output in the desired format
                 output = await presentPlugin.CallPluginFunction(output);
                 var quizData = new QuizData.QuizData(output);
-                Console.WriteLine(quizData.getQuestion());
-                await Task.Delay(20000);
                 var questionItem = new QuestionItem.QuestionItem(output);
-                Console.WriteLine("ANSWER: " + questionItem.getAnswer());
+                FrontendApp.FrontendApp frontendApp = new FrontendApp.FrontendApp();
+                await frontendApp.Display(quizData, questionItem);
             }
         }
     }
