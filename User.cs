@@ -6,7 +6,7 @@ namespace CollabAuditAI.CollabQuiz.UserInput
         {
             Console.Write("Enter the topic: "); // Ask the user for a topic
             string? input = Console.ReadLine();
-            string topic = input ?? "Q&A"; // Q&A is the default topic if null input
+            string topic = input ?? "Q&A"; // Q&A is the default topic if the input is null
             EventData.EventData newEvent = new EventData.EventData(topic);
             return newEvent;
         }

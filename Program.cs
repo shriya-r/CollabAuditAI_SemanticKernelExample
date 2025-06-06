@@ -20,6 +20,6 @@ var topic = await quizContext.Filter(kernel, quiz.GetTopic()); // Filter the use
 Plugin pluginFunctions = new QuizPlugin(kernel);
 var result = await pluginFunctions.CallPluginFunction(topic);
 
-// To format the output for presentation
+// To format the output for presentation and send to frontend application
 var formatter = new Formatter();
 await formatter.Presentation(kernel, result);
